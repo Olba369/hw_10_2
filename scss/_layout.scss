@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$main-font;
+  font-size: v.$p-size;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+}
+
+h1 {
+  font-size: v.$h1-size;
+  color: v.$h1-color;
+}
+
+h2 {
+  font-size: v.$h2-size;
+  color: v.$h1-color;
+}
+
+p {
+  font-size: v.$p-size;
+  color: v.$p-color;
+}

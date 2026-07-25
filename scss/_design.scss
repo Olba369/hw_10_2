@@ -1,0 +1,42 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.design {
+  background-color: v.$color-light;
+  padding: 80px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: start;
+    row-gap: 30px;
+
+    @media (max-width: 768px) {
+      justify-items: center;
+    }
+
+    h1 {
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
+    p {
+      max-width: 60%;
+    }
+
+    button {
+      height: 60px;
+      width: 100%;
+      max-width: 220px;
+      padding: 0 20px;
+      background-color: v.$main-color-dark;
+      color: v.$main-color;
+      text-transform: uppercase;
+      font-family: inherit; /* Наследовать шрифт от родителя */
+      font-size: v.$p-size;
+      font-weight: inherit; /* Наследовать жирность */
+    }
+  }
+}

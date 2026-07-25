@@ -1,0 +1,30 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+/*WORK*/
+.work {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    row-gap: 50px;
+
+    h2 {
+      grid-area: headline;
+      text-align: center;
+    }
+
+    p {
+      grid-area: paragraph;
+      text-align: center;
+      max-width: 540px;
+    }
+
+    img {
+      grid-area: img;
+      max-width: 100%;
+    }
+  }
+}
+/*WORK*/

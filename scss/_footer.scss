@@ -1,0 +1,24 @@
+@use "variables" as v;
+
+/*FOOTER*/
+footer {
+  background-color: v.$main-color-dark;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+    gap: 20px;
+
+    h4 {
+      color: v.$main-color;
+      font-size: 19px;
+    }
+
+    p {
+      color: v.$main-color;
+      font-size: 13px;
+    }
+  }
+}

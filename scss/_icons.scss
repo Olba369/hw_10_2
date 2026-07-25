@@ -1,0 +1,33 @@
+/*ICONS*/
+@use "variables" as v;
+@use "mixins" as m;
+
+.icons {
+  background-color: v.$main-color-dark;
+  padding: 100px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 20px;
+
+    .element {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+      column-gap: 20px;
+      ` img {
+        width: 50px;
+        height: 50px;
+      }
+
+      p {
+        color: v.$main-color;
+      }
+    }
+  }
+}
+/*ICONS*/
