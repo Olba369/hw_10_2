@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 article {
@@ -42,27 +42,41 @@ header {
   background-color: #eeeff1;
   padding: 80px 0 0 0;
 }
+@media (max-width: 480px) {
+  header {
+    padding: 50px 0 0 0;
+  }
+}
 header .container nav ul {
   display: grid;
   grid-template-columns: repeat(5, auto);
   -moz-column-gap: 30px;
        column-gap: 30px;
-  row-gap: 0;
   justify-content: start;
   list-style: none;
   text-transform: uppercase;
   transition: color 0.2s;
 }
+@media (max-width: 768px) {
+  header .container nav ul {
+    justify-content: center;
+  }
+}
 header .container nav ul li a:hover {
   color: #1511ec;
 }
 header .container nav ul li a:active {
-  color: #ff6b08;
+  color: #04501e;
 }
 
 .design {
   background-color: #eeeff1;
   padding: 80px 0;
+}
+@media (max-width: 480px) {
+  .design {
+    padding: 40px 0;
+  }
 }
 .design .container {
   display: grid;
@@ -78,11 +92,18 @@ header .container nav ul li a:active {
 }
 @media (max-width: 768px) {
   .design .container h1 {
+    text-align: center;
     font-size: 36px;
   }
 }
 .design .container p {
   max-width: 60%;
+}
+@media (max-width: 768px) {
+  .design .container p {
+    text-align: center;
+    max-width: 80%;
+  }
 }
 .design .container button {
   height: 60px;
@@ -95,6 +116,15 @@ header .container nav ul li a:active {
   font-family: inherit; /* Наследовать шрифт от родителя */
   font-size: 16px;
   font-weight: inherit; /* Наследовать жирность */
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.design .container button:hover {
+  background-color: #1511ec;
+  color: #eeeff1;
+  border-color: #34547a;
 }
 
 .about {
@@ -108,12 +138,24 @@ header .container nav ul li a:active {
   row-gap: 50px;
   padding: 80px 0;
 }
+@media (max-width: 480px) {
+  .about .container {
+    row-gap: 30px;
+    padding: 40px 0;
+  }
+}
 .about .container h2 {
   text-align: center;
 }
 .about .container p {
   text-align: center;
-  max-width: 540px;
+  max-width: 60%;
+}
+@media (max-width: 768px) {
+  .about .container p {
+    text-align: center;
+    max-width: 80%;
+  }
 }
 
 /*ICONS*/
@@ -121,19 +163,34 @@ header .container nav ul li a:active {
   background-color: #34547a;
   padding: 100px 0;
 }
+@media (max-width: 480px) {
+  .icons {
+    padding: 50px 0;
+  }
+}
 .icons .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
-  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+@media (max-width: 768px) {
+  .icons .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 30px;
+  }
+}
 .icons .container .element {
   display: grid;
-  grid-template-columns: repeat(2fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  justify-items: start;
+  justify-items: center;
+  align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -153,18 +210,28 @@ header .container nav ul li a:active {
   grid-template-rows: repeat(3, auto);
   justify-items: center;
   row-gap: 50px;
+  padding: 80px 0;
+}
+@media (max-width: 480px) {
+  .work .container {
+    padding: 40px 0;
+    row-gap: 30px;
+  }
 }
 .work .container h2 {
-  grid-area: headline;
   text-align: center;
 }
 .work .container p {
-  grid-area: paragraph;
   text-align: center;
-  max-width: 540px;
+  max-width: 60%;
+}
+@media (max-width: 768px) {
+  .work .container p {
+    text-align: center;
+    max-width: 80%;
+  }
 }
 .work .container img {
-  grid-area: img;
   max-width: 100%;
 }
 
@@ -179,6 +246,12 @@ footer .container {
   justify-content: space-between;
   padding: 50px 0;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  footer .container {
+    align-items: center;
+    padding: 30px 0;
+  }
 }
 footer .container h4 {
   color: hsl(0, 0%, 100%);

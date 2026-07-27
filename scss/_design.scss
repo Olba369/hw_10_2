@@ -4,6 +4,9 @@
 .design {
   background-color: v.$color-light;
   padding: 80px 0;
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
 
   .container {
     display: grid;
@@ -18,12 +21,13 @@
 
     h1 {
       @media (max-width: 768px) {
+        text-align: center;
         font-size: 36px;
       }
     }
 
     p {
-      max-width: 60%;
+      @include m.responsive-p;
     }
 
     button {
@@ -37,6 +41,10 @@
       font-family: inherit; /* Наследовать шрифт от родителя */
       font-size: v.$p-size;
       font-weight: inherit; /* Наследовать жирность */
+      border: 2px solid transparent;
+      border-radius: 5px;
+
+      @include m.button;
     }
   }
 }

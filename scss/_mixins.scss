@@ -1,0 +1,19 @@
+@use "variables" as v;
+
+@mixin responsive-p {
+  max-width: 60%;
+  @media (max-width: 768px) {
+    text-align: center;
+    max-width: 80%;
+  }
+}
+@mixin button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: v.$secondary-color;
+    color: v.$color-light;
+    border-color: v.$main-color-dark;
+  }
+}
